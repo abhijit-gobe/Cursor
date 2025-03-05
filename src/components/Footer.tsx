@@ -39,11 +39,16 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="relative mx-auto max-w-4xl rounded-lg overflow-hidden shadow-2xl border border-gray-800 mb-16">
-          <img 
-            src="/lovable-uploads/0375b7cb-72ea-4857-bd3f-eb6f8144134b.png" 
-            alt="Cursor Code Editor"
-            className="w-full"
-          />
+          <div className="w-full aspect-video bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-lg">
+            <div className="flex items-center p-2 border-b border-gray-800">
+              <div className="flex gap-1.5 ml-2">
+                <div className="w-3 h-3 rounded-full bg-red-500 opacity-75"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500 opacity-75"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500 opacity-75"></div>
+              </div>
+              <div className="mx-auto text-gray-500 text-xs">cursor.ai</div>
+            </div>
+          </div>
         </div>
         
         <div className="text-center mb-8">

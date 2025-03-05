@@ -18,17 +18,17 @@ const AnimatedGradient: React.FC<AnimatedGradientProps> = ({
   blendMode
 }) => {
   const gradientMap = {
-    'blue-purple': 'bg-gradient-to-r from-blue-600 to-purple-600',
-    'purple-pink': 'bg-gradient-to-r from-purple-600 to-pink-600',
-    'blue-pink': 'bg-gradient-to-r from-blue-600 to-pink-600',
-    'hero': 'bg-gradient-to-r from-purple-600 via-orange-500 to-blue-500',
-    'rainbow': 'bg-gradient-to-r from-purple-600 via-orange-500 to-blue-500',
+    'blue-purple': 'bg-gradient-to-r from-blue-600/40 to-purple-600/40',
+    'purple-pink': 'bg-gradient-to-r from-purple-600/40 to-pink-600/40',
+    'blue-pink': 'bg-gradient-to-r from-blue-600/40 to-pink-600/40',
+    'hero': 'bg-gradient-to-r from-purple-600/20 via-blue-500/20 to-purple-500/20',
+    'rainbow': 'bg-gradient-to-r from-purple-600/20 via-blue-500/20 to-purple-500/20',
   };
 
   const intensityMap = {
     light: 'opacity-20',
-    medium: 'opacity-40',
-    strong: 'opacity-70',
+    medium: 'opacity-30',
+    strong: 'opacity-40',
   };
 
   const blendModeClass = blendMode ? `mix-blend-${blendMode}` : '';

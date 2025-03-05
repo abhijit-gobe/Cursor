@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 bg-black"></div>
-      <AnimatedGradient variant="hero" intensity="light" className="opacity-60" />
+      <AnimatedGradient variant="hero" intensity="light" className="opacity-30" />
       
       <Container className="relative z-10">
         <div ref={textRef} className="max-w-4xl mx-auto text-center">
@@ -68,13 +68,23 @@ const Hero: React.FC = () => {
             </Button>
           </div>
           
-          {/* Code Editor Image */}
+          {/* Code Editor Mockup */}
           <div data-animate className="relative mx-auto max-w-4xl rounded-lg overflow-hidden shadow-2xl border border-gray-800">
-            <img 
-              src="/lovable-uploads/0375b7cb-72ea-4857-bd3f-eb6f8144134b.png" 
-              alt="Cursor Code Editor"
-              className="w-full"
-            />
+            <div className="w-full aspect-video bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-lg">
+              <div className="flex items-center p-2 border-b border-gray-800">
+                <div className="flex gap-1.5 ml-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500 opacity-75"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500 opacity-75"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500 opacity-75"></div>
+                </div>
+                <div className="mx-auto text-gray-500 text-xs">editor.js</div>
+              </div>
+              <div className="p-4 font-mono text-sm text-gray-400 text-left">
+                <div className="text-blue-400">function</div> <span className="text-green-400">codeEditor</span>() &#123;<br />
+                &nbsp;&nbsp;<span className="text-purple-400">return</span> <span className="text-orange-400">"AI-powered editing"</span>;<br />
+                &#125;
+              </div>
+            </div>
           </div>
         </div>
       </Container>
