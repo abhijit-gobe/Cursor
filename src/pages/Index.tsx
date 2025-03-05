@@ -35,7 +35,7 @@ const Index = () => {
     <>
       <CustomCursor />
       
-      <main className={`min-h-screen relative transition-opacity duration-500 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
+      <main className={`min-h-screen relative bg-black transition-opacity duration-500 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
         <Navbar />
         <Hero />
         <Features />
