@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import Button from './Button';
 import Container from './Container';
-import { Menu, X, ChevronRight, Github } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavItem {
   label: string;
@@ -12,11 +12,12 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: 'Features', href: '#features' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Blog', href: '#blog', isExternal: true },
-  { label: 'GitHub', href: 'https://github.com', isExternal: true },
+  { label: 'PRICING', href: '#pricing' },
+  { label: 'FEATURES', href: '#features' },
+  { label: 'OPEN SOURCE', href: '#opensource' },
+  { label: 'AI-JS', href: '#ai-js' },
+  { label: 'DOCS', href: '#docs' },
+  { label: 'GITHUB', href: 'https://github.com', isExternal: true },
 ];
 
 const Navbar: React.FC = () => {
@@ -36,14 +37,17 @@ const Navbar: React.FC = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out-expo py-4',
-        isScrolled ? 'bg-white/70 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'
       )}
     >
       <Container>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <span className="text-2xl font-bold gradient-text">Cursor</span>
+            <span className="text-white font-semibold flex items-center">
+              <span className="w-2 h-2 bg-white rounded-full mr-1"></span>
+              CURSOR
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -53,8 +57,8 @@ const Navbar: React.FC = () => {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary',
-                  item.isExternal ? 'text-foreground/70' : 'text-foreground'
+                  'text-xs font-medium transition-colors hover:text-white',
+                  'text-gray-400'
                 )}
                 target={item.isExternal ? '_blank' : undefined}
                 rel={item.isExternal ? 'noopener noreferrer' : undefined}
@@ -68,11 +72,10 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button
               variant="primary"
-              size="md"
-              icon={<ChevronRight size={16} />}
-              iconPosition="right"
+              size="sm"
+              className="bg-white hover:bg-gray-200 text-black text-xs"
             >
-              Download Now
+              SIGN IN
             </Button>
           </div>
 
@@ -90,7 +93,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-white/98 backdrop-blur-lg transform transition-transform duration-300 ease-out-expo md:hidden pt-20',
+          'fixed inset-0 z-40 bg-black/98 backdrop-blur-lg transform transition-transform duration-300 ease-out-expo md:hidden pt-20',
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
@@ -100,7 +103,7 @@ const Navbar: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-lg font-medium p-2 -mx-2 rounded-lg hover:bg-muted transition-colors"
+                className="text-lg font-medium p-2 -mx-2 rounded-lg hover:bg-gray-900 transition-colors text-gray-300"
                 target={item.isExternal ? '_blank' : undefined}
                 rel={item.isExternal ? 'noopener noreferrer' : undefined}
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -112,11 +115,9 @@ const Navbar: React.FC = () => {
             <Button
               variant="primary" 
               size="lg"
-              className="mt-4 w-full"
-              icon={<ChevronRight size={16} />}
-              iconPosition="right"
+              className="mt-4 w-full bg-white text-black"
             >
-              Download Now
+              SIGN IN
             </Button>
           </nav>
         </Container>

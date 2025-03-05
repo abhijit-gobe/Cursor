@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 
 interface AnimatedGradientProps {
   className?: string;
-  variant?: 'blue-purple' | 'purple-pink' | 'blue-pink' | 'hero';
+  variant?: 'blue-purple' | 'purple-pink' | 'blue-pink' | 'hero' | 'rainbow';
   intensity?: 'light' | 'medium' | 'strong';
   animate?: boolean;
   blendMode?: string;
@@ -12,16 +12,17 @@ interface AnimatedGradientProps {
 
 const AnimatedGradient: React.FC<AnimatedGradientProps> = ({
   className,
-  variant = 'blue-purple',
+  variant = 'rainbow',
   intensity = 'medium', 
   animate = true,
   blendMode
 }) => {
   const gradientMap = {
-    'blue-purple': 'bg-blue-purple-gradient',
-    'purple-pink': 'bg-purple-pink-gradient',
-    'blue-pink': 'bg-blue-pink-gradient',
-    'hero': 'bg-hero-gradient',
+    'blue-purple': 'bg-gradient-to-r from-blue-600 to-purple-600',
+    'purple-pink': 'bg-gradient-to-r from-purple-600 to-pink-600',
+    'blue-pink': 'bg-gradient-to-r from-blue-600 to-pink-600',
+    'hero': 'bg-gradient-to-r from-purple-600 via-orange-500 to-blue-500',
+    'rainbow': 'bg-gradient-to-r from-purple-600 via-orange-500 to-blue-500',
   };
 
   const intensityMap = {

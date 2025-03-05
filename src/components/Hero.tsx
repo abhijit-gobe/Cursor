@@ -31,61 +31,50 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 -z-10 bg-background"></div>
-      <AnimatedGradient variant="hero" intensity="light" />
+      <div className="absolute inset-0 -z-10 bg-black"></div>
+      <AnimatedGradient variant="hero" intensity="light" className="opacity-60" />
       
       <Container className="relative z-10">
         <div ref={textRef} className="max-w-4xl mx-auto text-center">
-          {/* Overline */}
-          <div 
-            data-animate 
-            className="inline-block mb-4 px-4 py-1.5 bg-primary/10 text-primary rounded-full font-medium text-sm"
-          >
-            The AI-native code editor
-          </div>
-          
           {/* Heading */}
-          <h1 data-animate className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">
-            Code like never before with <span className="gradient-text">AI-powered</span> editing
+          <h1 data-animate className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance text-white">
+            The AI Code Editor
           </h1>
           
           {/* Subheading */}
           <p 
             data-animate 
-            className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl mx-auto text-balance"
+            className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto text-balance"
           >
-            Cursor is the AI-first code editor that helps you write, edit, and understand code faster with AI-powered features and automated workflows.
+            Built to help you progressively accelerate <br />
+            solving the most hard coding steps
           </p>
           
           {/* CTA Buttons */}
-          <div data-animate className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div data-animate className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
               size="lg" 
-              icon={<ChevronRight size={18} />}
-              iconPosition="right"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto bg-white hover:bg-gray-200 text-black"
             >
-              Download for Mac
+              DOWNLOAD FOR MACOS
             </Button>
             
             <Button 
               variant="outline" 
               size="lg"
-              icon={<Github size={18} />}
-              iconPosition="left"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto border-gray-500 text-white"
             >
-              View on GitHub
+              WEB VERSION
             </Button>
           </div>
           
-          {/* Feature Badge */}
-          <div 
-            data-animate 
-            className="mt-12 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-foreground/70 text-sm"
-          >
-            <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-            Powered by GPT-4 and Code Llama 2
+          {/* Code Editor Image */}
+          <div data-animate className="relative mx-auto max-w-4xl rounded-lg overflow-hidden shadow-2xl border border-gray-800">
+            <img 
+              src="/lovable-uploads/0375b7cb-72ea-4857-bd3f-eb6f8144134b.png" 
+              alt="Cursor Code Editor"
+              className="w-full"
+            />
           </div>
         </div>
       </Container>

@@ -2,10 +2,10 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ContainerProps {
   children: React.ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 
