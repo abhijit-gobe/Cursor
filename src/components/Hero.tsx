@@ -50,6 +50,15 @@ const Hero: React.FC = () => {
             solving the most hard coding steps
           </p>
           
+          {/* Main Visual */}
+          <div data-animate className="w-full flex justify-center mb-10">
+            <img 
+              src="/lovable-uploads/605fc68c-a2fc-4bb7-aa35-fb86621b6622.png" 
+              alt="Colorful triangle shape" 
+              className="w-64 h-auto object-contain animate-float" 
+            />
+          </div>
+          
           {/* CTA Buttons */}
           <div data-animate className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 

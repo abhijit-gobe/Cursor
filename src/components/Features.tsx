@@ -45,6 +45,14 @@ const Features: React.FC = () => {
           </p>
         </div>
         
+        <div className="flex justify-center mb-16">
+          <img 
+            src="/lovable-uploads/f41df384-20a6-4f64-9be2-96c36a7a47ef.png" 
+            alt="Colorful 3D structure" 
+            className="w-72 h-auto object-contain" 
+          />
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FeatureCard
             title="Frontier Intelligence"
